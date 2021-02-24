@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SetStartVolume : MonoBehaviour
 {
-    private MusicManager musicManager;
     void Start()
     {
         GameObject
