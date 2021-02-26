@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65523982841289337, guid: 4748e983d98315deba3388807cad56e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 65523982841289337, guid: 4748e983d98315deba3388807cad56e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -507,6 +507,10 @@ PrefabInstance:
     - target: {fileID: 65523982841289338, guid: 4748e983d98315deba3388807cad56e6, type: 3}
       propertyPath: m_Name
       value: Lizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030175981697509940, guid: 4748e983d98315deba3388807cad56e6, type: 3}
+      propertyPath: currentSpeed
+      value: 0.56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4748e983d98315deba3388807cad56e6, type: 3}
@@ -688,13 +692,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535559662}
     m_Modifications:
+    - target: {fileID: -1726328488416596641, guid: 55ead582e2e13ad84bfe2a5c85a9637d, type: 3}
+      propertyPath: currentSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2798514826619300025, guid: 55ead582e2e13ad84bfe2a5c85a9637d, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2798514826619300025, guid: 55ead582e2e13ad84bfe2a5c85a9637d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2798514826619300025, guid: 55ead582e2e13ad84bfe2a5c85a9637d, type: 3}
       propertyPath: m_LocalPosition.y
