@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2793876403234489904}
   - component: {fileID: 1264298561}
   - component: {fileID: 9112524267069080695}
+  - component: {fileID: 8615759506681348571}
   m_Layer: 0
   m_Name: StarTrophy
   m_TagString: Untagged
@@ -174,6 +175,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c1b43a947e74ae8886de2c2aa136e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8615759506681348571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793876403234489910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767d8b2334f7dc865837e0d694eead18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &2793876403766172398
 GameObject:
   m_ObjectHideFlags: 0

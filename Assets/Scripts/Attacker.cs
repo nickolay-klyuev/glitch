@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [Range(-1f, 1.5f)]
-    public float currentSpeed;
+    private float currentSpeed;
+    private GameObject currentTarget;
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody2D myRigitBody = gameObject.AddComponent<Rigidbody2D>();
         myRigitBody.isKinematic = true;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
+
+        if (!currentTarget)
+        {
+            animator.SetBool("IsAttacking", false);
+        }
     }
 
     void OnTriggerEnter2D()
@@ -31,6 +40,18 @@ public class Attacker : MonoBehaviour
 
     public void StrikeCurrentTarget(float damage)
     {
-        Debug.Log(name + " damage: " + damage);
+        if (currentTarget)
+        {
+            Health health = currentTarget.GetComponent<Health>();
+            if (health)
+            {
+                health.DealGamage(damage);
+            }
+        }
+    }
+
+    public void Attack(GameObject obj)
+    {
+        currentTarget = obj;
     }
 }
