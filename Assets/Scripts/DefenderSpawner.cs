@@ -5,10 +5,23 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     public Camera myCamera;
+    private GameObject deffenderParent;
+
+    void Start()
+    {
+        deffenderParent = GameObject.Find("Defenders");
+        if (deffenderParent == null)
+        {
+            deffenderParent = new GameObject("Defenders");
+        }
+    }
 
     void OnMouseDown()
     {
-        
+        Vector2 rawPosition = CalculateWorldPointOfMouseClick();
+        Vector2 position = SnapToGrid(rawPosition);
+        GameObject newDefender = Instantiate(Button.selectedDefender, position, Quaternion.identity) as GameObject;
+        newDefender.transform.parent = deffenderParent.transform;
     }
 
     Vector2 SnapToGrid(Vector2 rawWorldPosition)
