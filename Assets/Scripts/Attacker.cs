@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
+    public float seenEverySeconds;
     private float currentSpeed;
     private GameObject currentTarget;
     private Animator animator;
