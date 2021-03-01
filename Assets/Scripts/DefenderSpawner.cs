@@ -6,9 +6,12 @@ public class DefenderSpawner : MonoBehaviour
 {
     public Camera myCamera;
     private GameObject deffenderParent;
+    private StarsDisplay starsDisplay;
 
     void Start()
     {
+        starsDisplay = GameObject.FindObjectOfType<StarsDisplay>();
+
         deffenderParent = GameObject.Find("Defenders");
         if (deffenderParent == null)
         {
@@ -18,10 +21,19 @@ public class DefenderSpawner : MonoBehaviour
 
     void OnMouseDown()
     {
-        Vector2 rawPosition = CalculateWorldPointOfMouseClick();
-        Vector2 position = SnapToGrid(rawPosition);
-        GameObject newDefender = Instantiate(Button.selectedDefender, position, Quaternion.identity) as GameObject;
-        newDefender.transform.parent = deffenderParent.transform;
+        StarsDisplay.Status useStarsResult = starsDisplay.UseStars(Button.selectedDefender.GetComponent<Defender>().starsCost);
+
+        if (useStarsResult == StarsDisplay.Status.SUCCESS)
+        {
+            Vector2 rawPosition = CalculateWorldPointOfMouseClick();
+            Vector2 position = SnapToGrid(rawPosition);
+            GameObject newDefender = Instantiate(Button.selectedDefender, position, Quaternion.identity) as GameObject;
+            newDefender.transform.parent = deffenderParent.transform;
+        }
+        else
+        {
+            Debug.Log("To buy it you need more stars");
+        }
     }
 
     Vector2 SnapToGrid(Vector2 rawWorldPosition)

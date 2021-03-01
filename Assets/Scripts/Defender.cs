@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour
 {
+    public int starsCost = 1;
     private StarsDisplay starsDisplay;
 
     void Start()
