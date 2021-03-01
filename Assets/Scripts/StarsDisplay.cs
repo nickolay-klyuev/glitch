@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StarsDisplay : MonoBehaviour
 {
     public enum Status {SUCCESS, FAILURE}
-    private int starsCount = 0;
+    private int starsCount = 10;
     private Text starsText;
 
     // Start is called before the first frame update
