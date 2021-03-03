@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -244}
+  m_AnchoredPosition: {x: -23.000061, y: -244}
   m_SizeDelta: {x: 171, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63489123
@@ -417,7 +417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -152}
+  m_AnchoredPosition: {x: -23, y: -152}
   m_SizeDelta: {x: 220.7928, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193142348
@@ -553,7 +553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: -66}
+  m_AnchoredPosition: {x: -23.000061, y: -66}
   m_SizeDelta: {x: 171, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &720264911
@@ -880,7 +880,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 72
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -911,7 +911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: 207}
+  m_AnchoredPosition: {x: -18, y: 223}
   m_SizeDelta: {x: 933.8242, y: 85.532196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &929709343
@@ -1040,7 +1040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 141.07, y: 98}
+  m_AnchoredPosition: {x: -17.999939, y: 119.000015}
   m_SizeDelta: {x: 779.6836, y: 55.601425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654444587
@@ -1070,7 +1070,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 45
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f975c2f05efcfb936a88642eb2be7f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInTime: 2
+  fadeInTime: 1
 --- !u!95 &1787651482
 Animator:
   serializedVersion: 3

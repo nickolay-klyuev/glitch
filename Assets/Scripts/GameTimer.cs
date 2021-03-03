@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class GameTimer : MonoBehaviour
     private LevelManager levelManager;
     private AudioSource audioSource;
     private GameObject youWinText;
+    private int levelCompleted;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefsManager.SetLevel(SceneManager.GetActiveScene().buildIndex);
+
         slider = GetComponent<Slider>();
         levelManager = GameObject.FindObjectOfType<LevelManager>();
         audioSource = GetComponent<AudioSource>();
@@ -43,6 +47,6 @@ public class GameTimer : MonoBehaviour
 
     void LoadNextLevel()
     {
-        levelManager.LoadLevel("03a Win");
+        levelManager.LoadNextLevel();
     }
 }

@@ -22,14 +22,44 @@ public class Spawner : MonoBehaviour
     {
         GameObject spawnObject = Instantiate(objectToSpawn) as GameObject;
         spawnObject.transform.parent = transform;
-        spawnObject.transform.position = transform.position;
+        if (spawnObject.GetComponent<Lizard>() != null)
+        {
+            spawnObject.transform.position = transform.position - new Vector3(3f, 0, 0);
+        }
+        else
+        {
+            spawnObject.transform.position = transform.position;
+        }
     }
 
     bool isTimeToSpawn(GameObject attacker)
     {
         Attacker thisAttacker = attacker.GetComponent<Attacker>();
         float spawnDelay = thisAttacker.seenEverySeconds;
-        float spawnsPerSecond = 1 / spawnDelay;
+        float spawnsPerSecond;
+        float difficulty = PlayerPrefsManager.GetDifficulty();
+        
+        if (difficulty == 1f)
+        {
+            spawnDelay += .5f;
+        }
+        else if (difficulty == 3f)
+        {
+            spawnDelay -= .5f;
+        }
+
+        if (Time.realtimeSinceStartup >= 60f)
+        {
+            spawnsPerSecond = 1 / (spawnDelay - 3f);
+        }
+        if (Time.realtimeSinceStartup >= 30f)
+        {
+            spawnsPerSecond = 1 / (spawnDelay - 1f);
+        }
+        else
+        {
+            spawnsPerSecond = 1 / spawnDelay;
+        }
 
         if (Time.deltaTime > spawnDelay)
         {

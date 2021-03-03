@@ -21,7 +21,6 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel(string name)
 	{
-		Debug.Log ("New Level load: " + name);
 		SceneManager.LoadScene(name);
 	}
 
@@ -33,6 +32,11 @@ public class LevelManager : MonoBehaviour
 
 	public void LoadNextLevel()
 	{
-		SceneManager.LoadScene(SceneManager.sceneCount);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	public void TryAgain()
+	{	
+		SceneManager.LoadScene(PlayerPrefsManager.GetLevel());
 	}
 }
